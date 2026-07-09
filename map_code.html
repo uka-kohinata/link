@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlusCode 変換</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f5f5f5; }
+        .box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); max-width: 400px; }
+        div { margin-bottom: 12px; }
+        input[type="text"] { width: 100%; padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; margin-top: 4px; }
+        input[type="submit"], input[type="reset"] { padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 4px; border: none; margin-right: 10px; }
+        input[type="submit"] { background: #007bff; color: white; }
+        input[type="reset"] { background: #6c757d; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <form action="https://saibara.sakura.ne.jp/map/convgeo.cgi" method="GET">
+        
+        <div>
+            <label>
+                <input type="radio" name="t" value="olc" checked> 
+                <strong>Google PlusCode</strong>
+            </label>
+            <input type="text" name="olc" value="" placeholder="GoogleMapからコピー">
+        </div>
+        
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+        
+    </form>
+</div>
+
+<!-- ↓コード不要部分削除 ↓ -->
+<script>
+function cleanPlusCode() {
+    // 入力欄の要素を取得
+    const inputField = document.getElementById('olc_input');
+    let value = inputField.value;
+
+    // 半角スペース、または全角スペースが含まれているかチェック
+    if (value.includes(' ') || value.includes(' ')) {
+        // 全角スペースを半角スペースに統一したあと、最初の半角スペースで分割し、前半（コード部分）だけを取り出す
+        const cleanValue = value.replace(' ', ' ').split(' ')[0];
+        
+        // 入力欄の中身を、切り取ったプラスコードだけに書き換える
+        inputField.value = cleanValue;
+    }
+}
+</script>
+
+
+</body>
+</html>
