@@ -1,0 +1,131 @@
+/* 全体の背景とフォント設定 */
+html, body {
+    background-color: #e0cebc !important; /* 薄茶 */
+    background-image: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    font-family: "Hiragino Sans", "Meiryo", sans-serif !important;
+}
+
+.linktree-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.linktree-container {
+    width: 100%;
+    max-width: 580px;
+    text-align: center;
+}
+
+/* メインロゴアイコン */
+.profile-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.profile-img img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2b2522;
+    margin-bottom: 8px; /* 紹介文との間隔 */
+}
+
+/* プロフィール紹介文 */
+.profile-bio {
+    font-size: 14px;
+    color: #49413b;
+    line-height: 1.6;
+    margin-bottom: 16px; /* アイコンとの間隔 */
+    padding: 0 20px;
+}
+
+/* 小さなSNSアイコンの横並び設定 */
+.sns-icons-container {
+    display: flex;
+    justify-content: center; /* 中央揃え */
+    gap: 16px;              /* アイコン同士の間隔 */
+    margin-bottom: 32px;    /* 下のボタンとの間隔 */
+}
+
+.sns-icon-link {
+    text-decoration: none !important;
+    transition: transform 0.15s ease;
+}
+
+.sns-icon-link:hover {
+    transform: scale(1.1); /* ホバー時に少し大きく */
+}
+
+.sns-icon-img {
+    width: 24px;  /* アイコンのサイズ（小さいアイコン） */
+    height: 24px;
+    object-fit: contain;
+}
+
+/* ボタンのデザイン */
+.lt-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* テキストを完全中央に */
+    background-color: #ffffff;
+    color: #1E2321 !important;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: transform 0.15s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: relative; /* アイコン配置の基準 */
+    min-height: 24px;
+}
+
+/* アイコン左端に固定する設定 */
+.btn-icon {
+    width: 50px;
+    height: 50px;
+    position: absolute; /* 絶対配置 */
+    left: 30px;         /* 左から30pxの位置に固定 */
+    object-fit: contain;
+}
+
+.lt-button:hover {
+    transform: scale(1.02);
+    background-color: #fafafa;
+}
+
+.Annotation {
+    margin-top: 24px;
+    font-size: 11px;
+    color: #49413b;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.footer-text {
+    margin-top: 48px;
+    font-size: 14px;
+    color: #49413b;
+    letter-spacing: 1px;
+}
