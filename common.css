@@ -129,3 +129,8 @@ html, body {
     color: #49413b;
     letter-spacing: 1px;
 }
+
+/* 特定のボタンの下だけ余白を広げる */
+.button-bt-margin {
+    margin-bottom: 40px;
+}
