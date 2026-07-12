@@ -100,6 +100,26 @@ html, body {
     min-height: 24px;
 }
 
+/* 上部余白広めボタン用 */
+.lt-button-topmargin {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* テキストを完全中央に */
+    background-color: #ffffff;
+    color: #1E2321 !important;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    margin-top: 10px;
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: transform 0.15s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: relative; /* アイコン配置の基準 */
+    min-height: 24px;
+}
+
 /* アイコン左端に固定する設定 */
 .btn-icon {
     width: 50px;
@@ -128,9 +148,4 @@ html, body {
     font-size: 14px;
     color: #49413b;
     letter-spacing: 1px;
-}
-
-/* 特定のボタンの下だけ余白を広げる */
-.button-bt-margin {
-    margin-bottom: 40px;
 }
